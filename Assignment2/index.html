@@ -1,0 +1,197 @@
+<!-- Creting Drag and Drop Application
+    -- Adding the JS CODE along with HTML for convinienet use.
+    -- There are two HTML codes
+    -- 1) IN first drag and drop after dragging I am inserting element into the list.
+    -- 2) In second drag and drop it is kind of free style drag and drop as for user conviniece. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <style>
+        .important-box {
+            background-color: yellow;
+            padding: 15px;
+            min-height: 50px;
+            border: 2px dashed black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <h2>To-Do List</h2>
+
+        <div id="important-box" class="important-box">
+            Drop Important Tasks Here
+        </div>
+
+        <input type="text" id="input-todo" placeholder="Enter a task">
+        <button id="button-todo">Add Task</button>
+
+        <ul id="ul-todo"></ul>
+    </div>
+
+    <script>
+        const todoInput = document.getElementById("input-todo");
+        const addButton = document.getElementById("button-todo");
+        const todoList = document.getElementById("ul-todo");
+        const importantBox = document.getElementById("important-box");
+
+        // Function to add task
+        function addTask() {
+            const taskText = todoInput.value.trim();
+            //removes whitespace (spaces, tabs, and newlines) from both the beginning and the end of a string.
+            if (taskText === "") return;
+
+            let li = document.createElement("li");
+            li.textContent = taskText;
+            li.setAttribute("draggable", "true");
+
+            li.addEventListener("dragstart", () => {
+                li.classList.add("dragging");
+            });
+
+            li.addEventListener("dragend", () => {
+                li.classList.remove("dragging");
+            });
+
+            todoList.appendChild(li);
+            todoInput.value = "";
+        }
+
+        // Allow drop inside the important box
+        importantBox.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+
+        importantBox.addEventListener("drop", (e) => {
+            e.preventDefault();
+            const draggedItem = document.querySelector(".dragging");
+            if (draggedItem) {
+                importantBox.appendChild(draggedItem);
+                draggedItem.style.backgroundColor = "orange";
+            }
+        });
+
+        addButton.addEventListener("click", addTask);
+
+    </script>
+</body>
+
+</html>
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <style>
+        .important-box {
+            background-color: yellow;
+            padding: 15px;
+            min-height: 50px;
+            border: 2px dashed black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <h2>To-Do List</h2>
+
+        <div id="important-box" class="important-box">
+            Drop Important Tasks Here
+        </div>
+
+        <input type="text" id="input-todo" placeholder="Enter a task">
+        <button id="button-todo">Add Task</button>
+
+        <ul id="ul-todo"></ul>
+    </div>
+
+    <script>
+        const todoInput = document.getElementById("input-todo");
+        const addButton = document.getElementById("button-todo");
+        const todoList = document.getElementById("ul-todo");
+        const importantBox = document.getElementById("important-box");
+
+        // Function to add task
+        function addTask() {
+            const taskText = todoInput.value.trim();
+            if (taskText === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = taskText;
+            li.style.position = "absolute"; // Enable free-style positioning
+            li.style.cursor = "grab"; // Change cursor to indicate draggable item
+
+            // Make the item draggable
+            makeDraggable(li);
+
+            todoList.appendChild(li);
+            todoInput.value = "";
+        }
+
+        // Function to make an element draggable
+        function makeDraggable(element) {
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            element.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                offsetX = e.clientX - element.getBoundingClientRect().left;
+                offsetY = e.clientY - element.getBoundingClientRect().top;
+                element.style.cursor = "grabbing"; // Change cursor while dragging
+            });
+
+            document.addEventListener("mousemove", (e) => {
+                if (isDragging) {
+                    const x = e.clientX - offsetX;
+                    const y = e.clientY - offsetY;
+                    element.style.left = `${x}px`;
+                    element.style.top = `${y}px`;
+                }
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                element.style.cursor = "grab"; // Reset cursor after dragging
+            });
+        }
+
+        // Allow dropping into the important box
+        importantBox.addEventListener("dragover", (e) => {
+            e.preventDefault();
+        });
+
+        importantBox.addEventListener("drop", (e) => {
+            e.preventDefault();
+            const draggedItem = document.querySelector(".dragging");
+            if (draggedItem) {
+                importantBox.appendChild(draggedItem);
+                draggedItem.style.backgroundColor = "orange";
+            }
+        });
+
+        // Button Actions
+        addButton.addEventListener("click", addTask);
+
+    </script>
+</body>
+
+</html>
+
+-->
