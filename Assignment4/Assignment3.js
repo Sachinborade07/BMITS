@@ -18,6 +18,41 @@ const products = [
     { name: "Shoes", price: 100, category: "Fashion" }
 ];
 
+// Task1
 const upperCaseNames = products.map(product => product.name.toUpperCase());
-
 console.log("Uppercase Product Names:", upperCaseNames);
+
+// Task2
+const fashion = products.filter(product => product.category === "Fashion");
+console.log(fashion);
+
+// Task3
+const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+console.log("The total price of all products is :-", totalPrice);
+
+// Task4
+function totalPriceByCategory(products, category) {
+    const a = products.filter(product => product.category === category)
+        .map(product => product.price)
+        .reduce((sum, price) => sum + price, 0);
+    return a;
+}
+
+console.log(totalPriceByCategory(products, "Fashion"));
+console.log(totalPriceByCategory(products, "Electronics"));
+
+
+/*
+    OutPut:-
+Task:1--- Uppercase Product Names: [ 'MOBILE', 'SHIRT', 'LAPTOP', 'SHOES' ]
+
+Task:2---[
+  { name: 'Shirt', price: 300, category: 'Fashion' },
+  { name: 'Shoes', price: 100, category: 'Fashion' }
+]
+
+Task:3---The total price of all products is :- 1000
+
+Task:4---400
+600
+*/
