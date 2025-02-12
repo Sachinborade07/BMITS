@@ -56,9 +56,9 @@ var cryptoPayment = /** @class */ (function (_super) {
     };
     return cryptoPayment;
 }(Payment));
-var cardP = new creditCardPayment(12000, "12-02-2025", 123456);
-cardP.processPayment();
-var payP = new creditCardPayment(10000, "12-02-2025", 89348);
-payP.processPayment();
-var crypP = new creditCardPayment(232020, "12-02-2025", 2394830284);
-crypP.processPayment();
+var cardPay = new creditCardPayment(12000, "12-02-2025", 123456);
+cardPay.processPayment();
+var payPay = new creditCardPayment(10000, "12-02-2025", 89348);
+payPay.processPayment();
+var crypPay = new creditCardPayment(232020, "12-02-2025", 2394830284);
+crypPay.processPayment();

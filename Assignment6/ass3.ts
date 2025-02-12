@@ -49,11 +49,11 @@ class cryptoPayment extends Payment {
     }
 }
 
-const cardP = new creditCardPayment(12000, "12-02-2025", 123456);
-cardP.processPayment();
+const cardPay = new creditCardPayment(12000, "12-02-2025", 123456);
+cardPay.processPayment();
 
-const payP = new creditCardPayment(10000, "12-02-2025", 89348);
-payP.processPayment();
+const payPay = new creditCardPayment(10000, "12-02-2025", 89348);
+payPay.processPayment();
 
-const crypP = new creditCardPayment(232020, "12-02-2025", 2394830284);
-crypP.processPayment();
+const crypPay = new creditCardPayment(232020, "12-02-2025", 2394830284);
+crypPay.processPayment();

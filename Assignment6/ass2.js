@@ -54,9 +54,9 @@ var Truck = /** @class */ (function (_super) {
     };
     return Truck;
 }(Vehicle));
-var car = new Car("MARUTI", "ALTO", 50);
-console.log(car.calculateRent(10));
-var truck = new Truck("TATA", "PickUP", 100);
-console.log(truck.calculateRent(10));
-var bike = new Bike("BMW", "ZX-10R", 30);
-console.log(bike.calculateRent(10));
+var car1 = new Car("MARUTI", "ALTO", 50);
+console.log(car1.calculateRent(10));
+var truck1 = new Truck("TATA", "PickUP", 100);
+console.log(truck1.calculateRent(10));
+var bike1 = new Bike("BMW", "ZX-10R", 30);
+console.log(bike1.calculateRent(10));

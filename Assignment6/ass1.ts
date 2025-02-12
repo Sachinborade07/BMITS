@@ -37,14 +37,16 @@ class Intern extends Employee {
     }
 }
 
-const emp1 = new Manager("A", 1, 20000);
-emp1.getEmp();
-console.log(emp1.calculateBonus());
 
-const emp2 = new Engineer("B", 2, 15000);
-emp2.getEmp();
-console.log(emp2.calculateBonus());
 
-const emp3 = new Intern("C", 3, 10000);
-emp3.getEmp();
-console.log(emp3.calculateBonus());
+const e1 = new Manager("A", 1, 20000);
+e1.getEmp();
+console.log(e1.calculateBonus());
+
+const e2 = new Engineer("B", 2, 15000);
+e2.getEmp();
+console.log(e2.calculateBonus());
+
+const e3 = new Intern("C", 3, 10000);
+e3.getEmp();
+console.log(e3.calculateBonus());

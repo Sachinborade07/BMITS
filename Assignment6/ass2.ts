@@ -33,9 +33,9 @@ class Truck extends Vehicle {
     }
 }
 
-const car = new Car("MARUTI", "ALTO", 50);
-console.log(car.calculateRent(10));
-const truck = new Truck("TATA", "PickUP", 100);
-console.log(truck.calculateRent(10));
-const bike = new Bike("BMW", "ZX-10R", 30);
-console.log(bike.calculateRent(10));
+const car1 = new Car("MARUTI", "ALTO", 50);
+console.log(car1.calculateRent(10));
+const truck1 = new Truck("TATA", "PickUP", 100);
+console.log(truck1.calculateRent(10));
+const bike1 = new Bike("BMW", "ZX-10R", 30);
+console.log(bike1.calculateRent(10));
