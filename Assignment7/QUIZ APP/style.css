@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading style */
+h1 {
+    color: #333;
+}
+
+/* Question text */
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Choices container */
+#choices {
+    margin-bottom: 20px;
+}
+
+/* Buttons for choices */
+.choices button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.choices button:hover {
+    background-color: #2980b9;
+}
+
+/* Next button */
+#next {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#next:hover {
+    background-color: #27ae60;
+}
+
+/* Score display */
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
