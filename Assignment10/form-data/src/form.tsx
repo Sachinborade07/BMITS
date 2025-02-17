@@ -18,7 +18,12 @@ const Form: React.FC = () => {
 
     const handleEvent = (e: React.FormEvent) => {
         e.preventDefault();
-        alert(JSON.stringify(formData));
+        alert(JSON.stringify("Data is Submitted"));
+
+        setFormData(Object.keys(formData).reduce((acc, key) => {
+            acc[key as keyof typeof formData] = "";
+            return acc;
+        }, {} as typeof formData));
     };
 
     return (
