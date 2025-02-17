@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="Styles/recipt.css">
+</head>
+
+<body>
+    <header>
+        <a href="products.html"> HOME </a>
+        <h1>🧾 Order Receipt</h1>
+    </header>
+
+    <section>
+        <table id="receipt-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="receipt-body"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><b>Grand Total:</b></td>
+                    <td id="grand-total"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <button id="clearStorage"> PAY THE BILL & GO TO MAIN MENU </button>
+
+    <script defer src="Scripts/recipt.js"></script>
+</body>
+
+</html>

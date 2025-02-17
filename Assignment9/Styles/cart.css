@@ -1,0 +1,90 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.store-title a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.store-title a:hover {
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.cart-items {
+    background: #ffffff;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.cart-items:hover {
+    transform: scale(1.05);
+}
+
+.cart-items img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.cart-items p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.empty-cart-message {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+#bill {
+    display: block;
+    background: linear-gradient(to right, #06beb6, #48b1bf);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 30px auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#bill:hover {
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    transform: scale(1.1);
+}
