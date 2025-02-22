@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
         inputTodo.value = "";
     });
 
-
     buttonDelete.addEventListener("click", () => {
         // localStorage.clear(); 
         ulTodo.innerHTML = "";

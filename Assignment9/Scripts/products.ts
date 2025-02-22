@@ -1,8 +1,14 @@
+interface rating {
+    rate: number;
+    count: number;
+}
+
 interface Product {
     id: number;
     title: string;
     price: number;
     image: string;
+    rating: rating;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
