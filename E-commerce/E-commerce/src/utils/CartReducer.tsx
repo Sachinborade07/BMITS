@@ -1,4 +1,4 @@
-import { addToCart, updateCart, deleteCart, ICartData, ICartProducts } from "./CartAPI";
+import { addToCart, updateCart, deleteCart, ICartData, ICartProducts } from "./CartApi";
 
 interface ICartAdd {
     type: "AddToCart";
