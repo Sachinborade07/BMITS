@@ -1,25 +1,7 @@
-const { fontFamily } = require('tailwindcss/defaultTheme')
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: ['class'],
-  content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
-    },
-  },
-  plugins: [require('tailwindcss-animate')],
-}
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
