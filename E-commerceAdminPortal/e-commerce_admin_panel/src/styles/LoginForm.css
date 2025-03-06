@@ -1,0 +1,60 @@
+/* Apply styles only to the login form container */
+.login-container {
+    font-family: Arial, sans-serif;
+    background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Card/container styling */
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Title styling */
+.login-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.login-card input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Error messages */
+.login-card p {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Button styling */
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.login-card button:hover {
+    background-color: #0056b3;
+}
