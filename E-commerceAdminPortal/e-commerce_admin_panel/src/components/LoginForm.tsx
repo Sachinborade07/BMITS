@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { adminAuth, userAuth } from "../api/auth";
+import { adminAuth } from "../api/auth";
 import { z } from 'zod';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +48,7 @@ const LoginFormZ: React.FC = () => {
         <>
             <div className="login-container">
                 <div className="login-card">
-                    <h2> ADMIN LOGIN </h2>
+                    <h2>ADMIN LOGIN</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div>
                             <label> EMAIL </label>
